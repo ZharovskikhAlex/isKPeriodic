@@ -6,7 +6,7 @@ void computeLPS(string pat, int* lps) // Префиксная функция и 
 {
     int j = 0;
 
-    lps[0] = 0; // lps[0] is always 0 
+    lps[0] = 0; // lps[0] всегда 0 
 
     int i = 1;
     while (i < pat.size()) {
@@ -32,7 +32,7 @@ void IsKPeriodic(int K, const string& txt) // функция проверки к
 {
     if (K < 1) // проверка условия K > 0
     {
-        cout << "K äîëæíî áûòü áîëüøå 0" << endl;
+        cout << "K должно быть больше 0" << endl;
     }
     else
     {
@@ -70,8 +70,8 @@ void IsKPeriodic(int K, const string& txt) // функция проверки к
             }
         }
         if (K * value == txt.size()) // если количество найденных совпадений, помноженное на К, равно длине строки, то строка кратна К
-            cout << "ñòðîêà " << txt << " кратна " << K << endl;
-        else cout << "ñòðîêà " << txt << " не кратна " << K << endl; // èíà÷å íå êðàòíà
+            cout << "строка " << txt << " кратна " << K << endl;
+        else cout << "строка " << txt << " не кратна " << K << endl; // èíà÷å íå êðàòíà
         delete[] lps;
     }
 }
